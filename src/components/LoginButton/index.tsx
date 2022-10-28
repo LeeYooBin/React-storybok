@@ -18,7 +18,7 @@ export interface LoginButton {
     onClick: () => void 
 };
 
-export const LoginButton = ({ text, onClick } : LoginButton) => {
+export const LoginButton = ({ text='Button', onClick } : LoginButton) => {
     return(
         <Button
             onClick={() => onClick()}

@@ -2,12 +2,12 @@ import 'react-app-polyfill/ie11';
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import { Thing } from '../.';
-import { LoginButton } from '../.';
+import { FormInput } from '../.';
 
 const App = () => {
   return (
     <div>
-      <LoginButton></LoginButton>
+      <FormInput />
     </div>
   );
 };
