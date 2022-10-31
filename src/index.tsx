@@ -18,3 +18,4 @@ export * from './components/LoginButton';
 export * from './components/HeaderNav';
 export * from './components/InputForm';
 export * from './components/CardEstablishment';
+export * from './components/LoginInput';
