@@ -1,5 +1,5 @@
-import React from "react";
-import styled from "styled-components";
+import React from 'react';
+import styled from 'styled-components';
 
 const Content = styled.button`
   width: 100vw;
@@ -31,11 +31,11 @@ const Title = styled.h3`
   font-weight: 550;
 
   :before {
-    content: "";
+    content: '';
     display: block;
     width: 9px;
     height: 9px;
-    background: #9659FB;
+    background: #9659fb;
     position: absolute;
     top: 20%;
     left: -1rem;
@@ -60,11 +60,11 @@ const Arrow = styled.img`
 `;
 
 export interface CardEstablishment {
-  title?: string,
-  name?: string,
-  arrowImage?: string,
-  onClick: () => void,
-};
+  title?: string;
+  name?: string;
+  arrowImage?: string;
+  onClick: () => void;
+}
 
 export const CardEstablishment = ({
   title,
@@ -75,8 +75,8 @@ export const CardEstablishment = ({
   return (
     <Content onClick={() => onClick()}>
       <BoxContent>
-        <Title>{title || "NÃO INFORMADO"}</Title>
-        <Text>{name || "NÃO INFORMADO"}</Text>
+        <Title>{title || 'NÃO INFORMADO'}</Title>
+        <Text>{name || 'NÃO INFORMADO'}</Text>
       </BoxContent>
       <Arrow src={arrowImage} />
     </Content>
