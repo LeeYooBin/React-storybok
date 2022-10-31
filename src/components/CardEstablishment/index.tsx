@@ -1,5 +1,5 @@
-import React from "react";
-import styled from "styled-components";
+import React from 'react';
+import styled from 'styled-components';
 
 const Content = styled.button`
   width: 100vw;
@@ -11,13 +11,14 @@ const Content = styled.button`
   margin: 0;
   border: 0;
   background: #fff;
-`
+`;
 
 const BoxContent = styled.div`
   width: 100%;
   display: flex;
   flex-direction: column;
-`
+`;
+
 const Title = styled.h3`
   display: flex;
   width: 100%;
@@ -30,17 +31,17 @@ const Title = styled.h3`
   font-weight: 550;
 
   :before {
-    content: "";
+    content: '';
     display: block;
     width: 9px;
     height: 9px;
-    background: #9659FB;
+    background: #9659fb;
     position: absolute;
     top: 20%;
     left: -1rem;
     border-radius: 50%;
   }
-`
+`;
 
 const Text = styled.h3`
   width: 100%;
@@ -50,29 +51,34 @@ const Text = styled.h3`
   display: block;
   font-size: 12px;
   font-weight: 300;
-`
+`;
 
 const Arrow = styled.img`
   width: 0.8rem;
   margin: 0;
   padding: 0;
-`
+`;
 
 export interface CardEstablishment {
-  title?: string,
-  name?: string,
-  arrowImage?: string,
-  onClick: () => void
-};
+  title?: string;
+  name?: string;
+  arrowImage?: string;
+  onClick: () => void;
+}
 
-export const CardEstablishment = ({title, name, arrowImage, onClick} : CardEstablishment) => {
+export const CardEstablishment = ({
+  title,
+  name,
+  arrowImage,
+  onClick,
+}: CardEstablishment) => {
   return (
     <Content onClick={() => onClick()}>
       <BoxContent>
-        <Title>{title || "NÃO INFORMADO"}</Title>
-        <Text>{name || "NÃO INFORMADO"}</Text>
+        <Title>{title || 'NÃO INFORMADO'}</Title>
+        <Text>{name || 'NÃO INFORMADO'}</Text>
       </BoxContent>
-        <Arrow src={arrowImage}/>
+      <Arrow src={arrowImage} />
     </Content>
-  )
-}
+  );
+};
