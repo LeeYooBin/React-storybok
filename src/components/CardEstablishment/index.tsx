@@ -70,14 +70,12 @@ export const CardEstablishment = ({
   name,
   arrowImage,
   onClick,
-}: CardEstablishment) => {
-  return (
-    <Content onClick={() => onClick()}>
-      <BoxContent>
-        <Title>{title || 'NÃO INFORMADO'}</Title>
-        <Text>{name || 'NÃO INFORMADO'}</Text>
-      </BoxContent>
-      <Arrow src={arrowImage} />
-    </Content>
-  )
-};
+}: CardEstablishment) => (
+  <Content onClick={() => onClick()}>
+    <BoxContent>
+      <Title>{title || 'NÃO INFORMADO'}</Title>
+      <Text>{name || 'NÃO INFORMADO'}</Text>
+    </BoxContent>
+    <Arrow src={arrowImage} />
+  </Content>
+);

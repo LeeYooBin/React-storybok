@@ -1,18 +1,18 @@
 import React from 'react';
-import styled from "styled-components";
+import styled from 'styled-components';
 
 const Content = styled.div`
-    width: 100%;
-    height: auto
-    padding: 20px;
+  width: 100%;
+  height: auto
+  padding: 20px;
 `;
 
 const Label = styled.label`
-  wisth: 100%;
+  width: 100%;
   font-size: 20px;
-  font-whight: 400;
+  font-weight: 400;
   margin-bottom: 7px;
-`
+`;
 
 const Input = styled.input`
   width: 100%;
@@ -20,7 +20,7 @@ const Input = styled.input`
   border: 0;
   outline: 0;
   font-size: 14px;
-  color: #7640D0;
+  color: #7640d0;
   font-weight: 550;
 
   ::-webkit-input-placeholder{
@@ -29,20 +29,18 @@ const Input = styled.input`
     font-size: 14px;
     font-weight: 400;
 }
-`
+`;
 
 export interface InputForm {
-  label?: string,
-  name?: string,
-  value?: string,
-  placeholder?: string,
-};
+  label?: string;
+  name?: string;
+  value?: string;
+  placeholder?: string;
+}
 
-export const InputForm = ({label, name, value, placeholder}: InputForm) => {
-    return(
-        <Content>
-          <Label>{label}</Label>
-          <Input name={name} value={value} type="text" placeholder={placeholder} />
-        </Content>
-    );
-};
+export const InputForm = ({label, name, value, placeholder}: InputForm) => (
+  <Content>
+    <Label>{label}</Label>
+    <Input name={name} value={value} type="text" placeholder={placeholder} />
+  </Content>
+);
