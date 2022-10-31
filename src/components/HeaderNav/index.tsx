@@ -16,17 +16,16 @@ const Arrow = styled.img`
   margin-right: 10px;
 `;
 
-const Text = styled.p`
-`;
+const Text = styled.p``;
 
 export interface HeaderNav {
   arrowImage?: string;
   textInfo?: string;
 }
 
-export const HeaderNav = ({ arrowImage, textInfo } : HeaderNav) => (
+export const HeaderNav = ({ arrowImage, textInfo }: HeaderNav) => (
   <Content>
     <Arrow src={arrowImage} />
-    <Text>{textInfo || "não informado"}</Text>
+    <Text>{textInfo || 'não informado'}</Text>
   </Content>
 );

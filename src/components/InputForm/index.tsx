@@ -23,12 +23,12 @@ const Input = styled.input`
   color: #7640d0;
   font-weight: 550;
 
-  ::-webkit-input-placeholder{
+  ::-webkit-input-placeholder {
     color: #393335;
     opacity: 50%;
     font-size: 14px;
     font-weight: 400;
-}
+  }
 `;
 
 export interface InputForm {
@@ -38,7 +38,12 @@ export interface InputForm {
   placeholder?: string;
 }
 
-export const InputForm = ({label, name, value, placeholder}: InputForm) => (
+export const InputForm = ({
+  label, 
+  name, 
+  value, 
+  placeholder
+}: InputForm) => (
   <Content>
     <Label>{label}</Label>
     <Input name={name} value={value} type="text" placeholder={placeholder} />
