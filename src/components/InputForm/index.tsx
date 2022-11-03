@@ -43,8 +43,8 @@ export interface InputForm {
 }
 
 export const InputForm = ({
-  title = 'Título', 
-  placeholder = 'Placeholder', 
+  title = 'Título',
+  placeholder = 'Placeholder',
   color,
 }: InputForm) => (
   <Content>
