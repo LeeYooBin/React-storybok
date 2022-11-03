@@ -23,7 +23,7 @@ const Label = styled.label`
 const Input = styled.input`
   border: none;
   outline: none;
-  color: ${({ color }: InputForm) => color ? color : '#000'};
+  color: ${({ color }: InputForm) => (color ? color : '#000')};
   font-size: 1rem;
   font-weight: 600;
   width: 100%;
@@ -42,9 +42,13 @@ export interface InputForm {
   color?: string;
 }
 
-export const InputForm = ({ title='Título', placeholder='Placeholder', color} : InputForm) => (
+export const InputForm = ({
+  title='Título', 
+  placeholder='Placeholder', 
+  color
+} : InputForm) => (
   <Content>
     <Label>{title}</Label>
-    <Input placeholder={`“${placeholder}”`} color={color}/>
+    <Input placeholder={`“${placeholder}”`} color={color} />
   </Content>
 );

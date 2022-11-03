@@ -13,9 +13,9 @@ const Input = styled.input`
   padding: 0 5px;
   border: solid 1px #000;
   border-radius: 5px;
-  font: 500 1rem/1.5rem "open-sans", sans-serif;
+  font: 500 1rem/1.5rem 'open-sans', sans-serif;
   outline: none;
-  
+
   :focus + label,
   :not(:placeholder-shown) + label {
     opacity: 1;
@@ -39,12 +39,12 @@ const Label = styled.label`
 `;
 
 export interface LoginInput {
-  text?: string,
-};
+  text?: string;
+}
 
-export const LoginInput = ({ text='Placeholder' }: LoginInput) => (
+export const LoginInput = ({ text = 'Placeholder' }: LoginInput) => (
   <Content>
-    <Input placeholder='ﾠﾠ' />
+    <Input placeholder="ﾠﾠ" />
     <Label>{text}</Label>
   </Content>
 );
