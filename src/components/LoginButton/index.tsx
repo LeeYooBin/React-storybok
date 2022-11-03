@@ -3,7 +3,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 const Button = styled.button<LoginButton>`
-  background-color: ${({ backgroundColor }: LoginButton) => 
+  background-color: ${({ backgroundColor }: LoginButton) =>
     backgroundColor ? backgroundColor : '#000'};
   color: ${({ color }: LoginButton) => (color ? color : '#fff')};
   padding: 15px 125px;
@@ -20,10 +20,10 @@ export interface LoginButton {
   color?: string;
 }
 
-export const LoginButton = ({ 
-  text = 'Text', 
-  backgroundColor, 
-  color 
+export const LoginButton = ({
+  text = 'Text',
+  backgroundColor,
+  color,
 }: LoginButton) => (
   <Button color={color} backgroundColor={backgroundColor}>
     {text}
