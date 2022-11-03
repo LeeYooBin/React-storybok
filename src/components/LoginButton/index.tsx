@@ -2,9 +2,9 @@ import React from 'react';
 
 import styled from 'styled-components';
 
-const Button = styled.button`
-  background-color: #9659fb;
-  color: #fff;
+const Button = styled.button<LoginButton>`
+  background-color: ${({ backgroundColor }: LoginButton) => backgroundColor ? backgroundColor : '#000'};
+  color: ${({ color }: LoginButton) => color ? color : '#fff'};
   padding: 15px 125px;
   font-size: 1rem;
   font-weight: 600;
@@ -15,9 +15,10 @@ const Button = styled.button`
 
 export interface LoginButton {
   text?: string;
-  onClick: () => void;
+  backgroundColor?: string;
+  color?: string; 
 }
 
-export const LoginButton = ({ text, onClick }: LoginButton) => (
-  <Button onClick={() => onClick()}>{text}</Button>
+export const LoginButton = ({ text='Text', backgroundColor, color }: LoginButton) => (
+  <Button color={color} backgroundColor={backgroundColor}>{text}</Button>
 );
