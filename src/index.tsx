@@ -19,3 +19,4 @@ export * from './components/HeaderNav';
 export * from './components/InputForm';
 export * from './components/CardEstablishment';
 export * from './components/LoginInput';
+export * from './components/SaveButton';
