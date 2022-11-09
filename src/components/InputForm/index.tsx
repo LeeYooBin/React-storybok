@@ -55,7 +55,7 @@ export const InputForm = ({
 }: InputForm) => (
   <Content>
     <Label>{title}</Label>
-    <Input 
+    <Input
       placeholder={`“${placeholder}”`}
       color={color}
       type={type}

@@ -58,7 +58,7 @@ export const LoginInput = ({
   onChange,
 }: LoginInput) => (
   <Content>
-    <Input 
+    <Input
       placeholder="ﾠﾠ"
       width={width}
       height={height}
