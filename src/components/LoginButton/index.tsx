@@ -29,7 +29,12 @@ export const LoginButton = ({
   padding,
   onClick,
 }: LoginButton) => (
-  <Button color={color} backgroundColor={backgroundColor} padding={padding} onClick={onClick}>
+  <Button 
+    color={color}
+    backgroundColor={backgroundColor}
+    padding={padding}
+    onClick={onClick}
+  >
     {text}
   </Button>
 );

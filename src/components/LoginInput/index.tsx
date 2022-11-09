@@ -58,7 +58,15 @@ export const LoginInput = ({
   onChange,
 }: LoginInput) => (
   <Content>
-    <Input placeholder="ﾠﾠ" width={width} height={height} padding={padding} value={value} type={type} onChange={onChange}/>
+    <Input 
+      placeholder="ﾠﾠ"
+      width={width}
+      height={height}
+      padding={padding}
+      value={value}
+      type={type}
+      onChange={onChange}
+    />
     <Label>{text}</Label>
   </Content>
 );

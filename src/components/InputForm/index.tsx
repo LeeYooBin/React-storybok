@@ -55,6 +55,12 @@ export const InputForm = ({
 }: InputForm) => (
   <Content>
     <Label>{title}</Label>
-    <Input placeholder={`“${placeholder}”`} color={color} type={type} value={value} onChange={onChange}/>
+    <Input 
+      placeholder={`“${placeholder}”`}
+      color={color}
+      type={type}
+      value={value}
+      onChange={onChange}
+    />
   </Content>
 );

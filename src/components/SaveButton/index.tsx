@@ -19,10 +19,8 @@ export interface SaveButton {
   onClick?: () => void;
 }
 
-export const SaveButton = ({
-  text = 'Text', 
-  color, 
-  onClick,
-}: SaveButton) => (
-  <Button color={color} onClick={onClick}>{text}</Button>
+export const SaveButton = ({ text = 'Text', color, onClick, }: SaveButton) => (
+  <Button color={color} onClick={onClick}>
+    {text}
+  </Button>
 );
