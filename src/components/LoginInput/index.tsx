@@ -10,7 +10,7 @@ const Content = styled.div`
 const Input = styled.input<LoginInput>`
   width: ${({ width }: LoginInput) => (width ? width : '285px')};
   height: ${({ height }: LoginInput) => (height ? height : '45px')};
-  padding: 0 5px;
+  padding: ${({ padding }: LoginInput) => (padding ? padding : '0 5px')};
   border: solid 1px #000;
   border-radius: 5px;
   font: 500 1rem/1.5rem 'open-sans', sans-serif;
@@ -20,7 +20,7 @@ const Input = styled.input<LoginInput>`
   :not(:placeholder-shown) + label {
     opacity: 1;
     position: absolute;
-    top: -45%;
+    top: -50%;
     left: 1%;
   }
 `;
@@ -42,15 +42,17 @@ export interface LoginInput {
   text?: string;
   width?: string;
   height?: string;
+  padding?: string;
 }
 
-export const LoginInput = ({ 
+export const LoginInput = ({
   text = 'Placeholder',
   width,
-  height
+  height,
+  padding,
 }: LoginInput) => (
   <Content>
-    <Input placeholder="ﾠﾠ" width={width} height={height}/>
+    <Input placeholder="ﾠﾠ" width={width} height={height} padding={padding} />
     <Label>{text}</Label>
   </Content>
 );
