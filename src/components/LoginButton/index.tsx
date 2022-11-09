@@ -18,14 +18,14 @@ export interface LoginButton {
   text?: string;
   backgroundColor?: string;
   color?: string;
-  padding?:string;
+  padding?: string;
 }
 
 export const LoginButton = ({
   text = 'Text',
   backgroundColor,
   color,
-  padding
+  padding,
 }: LoginButton) => (
   <Button color={color} backgroundColor={backgroundColor} padding={padding}>
     {text}
