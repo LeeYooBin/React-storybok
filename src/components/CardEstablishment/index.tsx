@@ -62,16 +62,14 @@ export interface CardEstablishment {
   title?: string;
   name?: string;
   arrowImage?: string;
-  onClick: () => void;
 }
 
 export const CardEstablishment = ({
   title,
   name,
   arrowImage,
-  onClick,
 }: CardEstablishment) => (
-  <Content onClick={() => onClick()}>
+  <Content>
     <BoxContent>
       <Title>{title || 'NÃO INFORMADO'}</Title>
       <Text>{name || 'NÃO INFORMADO'}</Text>
