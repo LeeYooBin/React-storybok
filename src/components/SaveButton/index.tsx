@@ -16,8 +16,13 @@ const Button = styled.button<SaveButton>`
 export interface SaveButton {
   text?: string;
   color?: string;
+  onClick?: () => void;
 }
 
-export const SaveButton = ({ text = 'Text', color }: SaveButton) => (
-  <Button color={color}>{text}</Button>
+export const SaveButton = ({
+  text = 'Text', 
+  color, 
+  onClick,
+}: SaveButton) => (
+  <Button color={color} onClick={onClick}>{text}</Button>
 );

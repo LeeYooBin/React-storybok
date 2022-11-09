@@ -40,15 +40,21 @@ export interface InputForm {
   title?: string;
   placeholder?: string;
   color?: string;
+  type?: string;
+  value?: string;
+  onChange?: () => void;
 }
 
 export const InputForm = ({
   title = 'Título',
   placeholder = 'Placeholder',
   color,
+  type,
+  value,
+  onChange,
 }: InputForm) => (
   <Content>
     <Label>{title}</Label>
-    <Input placeholder={`“${placeholder}”`} color={color} />
+    <Input placeholder={`“${placeholder}”`} color={color} type={type} value={value} onChange={onChange}/>
   </Content>
 );

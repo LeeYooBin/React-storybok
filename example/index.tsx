@@ -7,7 +7,7 @@ import { LoginButton } from '../.';
 const App = () => {
   return (
     <div>
-      <LoginButton></LoginButton>
+      <LoginButton onClick={() => console.log("Hello world")}/>
     </div>
   );
 };

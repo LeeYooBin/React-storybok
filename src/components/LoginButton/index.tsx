@@ -19,6 +19,7 @@ export interface LoginButton {
   backgroundColor?: string;
   color?: string;
   padding?: string;
+  onClick?: () => void;
 }
 
 export const LoginButton = ({
@@ -26,8 +27,9 @@ export const LoginButton = ({
   backgroundColor,
   color,
   padding,
+  onClick,
 }: LoginButton) => (
-  <Button color={color} backgroundColor={backgroundColor} padding={padding}>
+  <Button color={color} backgroundColor={backgroundColor} padding={padding} onClick={onClick}>
     {text}
   </Button>
 );

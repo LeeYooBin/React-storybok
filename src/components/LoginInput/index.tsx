@@ -43,6 +43,9 @@ export interface LoginInput {
   width?: string;
   height?: string;
   padding?: string;
+  value?: string;
+  type?: string;
+  onChange?: () => void;
 }
 
 export const LoginInput = ({
@@ -50,9 +53,12 @@ export const LoginInput = ({
   width,
   height,
   padding,
+  value,
+  type,
+  onChange,
 }: LoginInput) => (
   <Content>
-    <Input placeholder="ﾠﾠ" width={width} height={height} padding={padding} />
+    <Input placeholder="ﾠﾠ" width={width} height={height} padding={padding} value={value} type={type} onChange={onChange}/>
     <Label>{text}</Label>
   </Content>
 );
