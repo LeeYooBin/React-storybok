@@ -7,9 +7,9 @@ const Content = styled.div`
   height: auto;
 `;
 
-const Input = styled.input`
-  width: 285px;
-  height: 45px;
+const Input = styled.input<LoginInput>`
+  width: ${({ width }: LoginInput) => (width ? width : '285px')};
+  height: ${({ height }: LoginInput) => (height ? height : '45px')};
   padding: 0 5px;
   border: solid 1px #000;
   border-radius: 5px;
@@ -40,11 +40,17 @@ const Label = styled.label`
 
 export interface LoginInput {
   text?: string;
+  width?: string;
+  height?: string;
 }
 
-export const LoginInput = ({ text = 'Placeholder' }: LoginInput) => (
+export const LoginInput = ({ 
+  text = 'Placeholder',
+  width,
+  height
+}: LoginInput) => (
   <Content>
-    <Input placeholder="ﾠﾠ" />
+    <Input placeholder="ﾠﾠ" width={width} height={height}/>
     <Label>{text}</Label>
   </Content>
 );
