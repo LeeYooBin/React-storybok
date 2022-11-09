@@ -6,7 +6,7 @@ const Button = styled.button<LoginButton>`
   background-color: ${({ backgroundColor }: LoginButton) =>
     backgroundColor ? backgroundColor : '#000'};
   color: ${({ color }: LoginButton) => (color ? color : '#fff')};
-  padding: 15px 125px;
+  padding: ${({ padding }: LoginButton) => (padding ? padding : '15px 125px')};
   font-size: 1rem;
   font-weight: 600;
   cursor: pointer;
@@ -18,14 +18,16 @@ export interface LoginButton {
   text?: string;
   backgroundColor?: string;
   color?: string;
+  padding?:string;
 }
 
 export const LoginButton = ({
   text = 'Text',
   backgroundColor,
   color,
+  padding
 }: LoginButton) => (
-  <Button color={color} backgroundColor={backgroundColor}>
+  <Button color={color} backgroundColor={backgroundColor} padding={padding}>
     {text}
   </Button>
 );
