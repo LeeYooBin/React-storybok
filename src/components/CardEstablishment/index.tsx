@@ -53,27 +53,42 @@ const Text = styled.h3`
 `;
 
 const Arrow = styled.img`
-  width: 0.8rem;
+  width: 10px;
   margin: 0;
   padding: 0;
+`;
+
+const InfoButton = styled.button`
+  width: auto;
+  height: auto;
+  cursor: pointer;
+  border: none;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 `;
 
 export interface CardEstablishment {
   title?: string;
   name?: string;
   arrowImage?: string;
+  onClick?: () => void;
 }
 
 export const CardEstablishment = ({
   title,
   name,
   arrowImage,
+  onClick,
 }: CardEstablishment) => (
   <Content>
     <BoxContent>
       <Title>{title || 'NÃO INFORMADO'}</Title>
       <Text>{name || 'NÃO INFORMADO'}</Text>
     </BoxContent>
-    <Arrow src={arrowImage} />
+    <InfoButton onClick={onClick}>
+      <Arrow src={arrowImage} />
+    </InfoButton>
   </Content>
 );
