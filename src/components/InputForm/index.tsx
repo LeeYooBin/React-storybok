@@ -29,7 +29,7 @@ const Input = styled.input`
   width: 100%;
 
   ::placeholder {
-    opacity: 0.35;
+    opacity: 0.45;
     font-style: italic;
     font-size: 0.9rem;
     font-weight: 400;
