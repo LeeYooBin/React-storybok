@@ -18,14 +18,28 @@ const Arrow = styled.img`
 
 const Text = styled.p``;
 
+const ArrowButton = styled.button`
+  background: transparent;
+  cursor: pointer;
+  border: none;
+  width: auto;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
+
 export interface HeaderNav {
   arrowImage?: string;
   textInfo?: string;
+  onClick?: () => void;
 }
 
-export const HeaderNav = ({ arrowImage, textInfo }: HeaderNav) => (
+export const HeaderNav = ({ arrowImage, textInfo, onClick }: HeaderNav) => (
   <Content>
-    <Arrow src={arrowImage} />
+    <ArrowButton onClick={onClick}>
+      <Arrow src={arrowImage} />
+    </ArrowButton>
     <Text>{textInfo || 'não informado'}</Text>
   </Content>
 );
