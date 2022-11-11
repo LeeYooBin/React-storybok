@@ -20,3 +20,4 @@ export * from './components/InputForm';
 export * from './components/CardEstablishment';
 export * from './components/LoginInput';
 export * from './components/SaveButton';
+export * from './components/SearchInput';
