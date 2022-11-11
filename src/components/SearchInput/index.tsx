@@ -67,7 +67,7 @@ export const SearchInput = ({
   handleExit,
   ArrowImage,
   MicImage,
-  handleMicrophone
+  handleMicrophone,
 }: SearchInput) => (
   <Label>
     <Input
