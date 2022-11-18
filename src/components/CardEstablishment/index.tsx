@@ -2,9 +2,9 @@ import React from 'react';
 import styled from 'styled-components';
 
 const Content = styled.button`
-  width: 100vw;
+  width: 100%;
   height: auto;
-  padding: 14px 40px;
+  padding: 14px 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -17,16 +17,18 @@ const BoxContent = styled.div`
   width: 100%;
   display: flex;
   flex-direction: column;
+  gap: 3px;
 `;
 const Title = styled.h3`
   display: flex;
+  align-items: center;
   width: 100%;
   height: auto;
   text-align: start;
-  margin: 0 0 5px 0;
+  margin: 0;
   padding: 0;
   position: relative;
-  font-size: 16px;
+  font-size: 1rem;
   font-weight: 550;
 
   :before {
@@ -35,10 +37,9 @@ const Title = styled.h3`
     width: 9px;
     height: 9px;
     background: #9659fb;
-    position: absolute;
-    top: 20%;
-    left: -1rem;
     border-radius: 50%;
+    margin-right: 8px;
+    margin-top: -3px;
   }
 `;
 
@@ -48,8 +49,8 @@ const Text = styled.h3`
   margin: 0;
   padding: 0;
   display: block;
-  font-size: 12px;
   font-weight: 300;
+  font-size: 0.7rem;
 `;
 
 const Arrow = styled.img`
@@ -63,7 +64,6 @@ const InfoButton = styled.button`
   height: auto;
   cursor: pointer;
   border: none;
-  background: transparent;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -73,21 +73,19 @@ export interface CardEstablishment {
   title?: string;
   name?: string;
   arrowImage?: string;
-  onClick?: () => void;
 }
 
 export const CardEstablishment = ({
   title,
   name,
   arrowImage,
-  onClick,
 }: CardEstablishment) => (
   <Content>
     <BoxContent>
       <Title>{title || 'NÃO INFORMADO'}</Title>
       <Text>{name || 'NÃO INFORMADO'}</Text>
     </BoxContent>
-    <InfoButton onClick={onClick}>
+    <InfoButton>
       <Arrow src={arrowImage} />
     </InfoButton>
   </Content>
