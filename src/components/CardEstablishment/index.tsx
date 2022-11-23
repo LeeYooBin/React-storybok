@@ -10,7 +10,7 @@ const Content = styled.button`
   justify-content: space-between;
   margin: 0;
   border: 0;
-  background: #fff;
+  background: #ffffff;
 `;
 
 const BoxContent = styled.div`
